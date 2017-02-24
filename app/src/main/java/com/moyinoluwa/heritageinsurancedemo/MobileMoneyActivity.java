@@ -20,8 +20,6 @@ import android.widget.Toast;
 import com.moyinoluwa.heritageinsurancedemo.mobilemoney.ChargeObject;
 import com.moyinoluwa.heritageinsurancedemo.mobilemoney.MobileMoneyRequest;
 import com.moyinoluwa.heritageinsurancedemo.mobilemoney.MobileMoneyResponse;
-import com.moyinoluwa.heritageinsurancedemo.transaction.TransactionService;
-import com.moyinoluwa.heritageinsurancedemo.transaction.Url;
 
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -62,7 +60,7 @@ public class MobileMoneyActivity extends AppCompatActivity {
         ChargeObject chargeObject = new ChargeObject("256781644531");
 
         MobileMoneyRequest mobileMoneyRequest = new MobileMoneyRequest(chargeObject, amountText,
-                "merchantreferenceId", "1", "GH", "NGN");
+                "987gb", "1", "GH", "GHS");
 
         final Retrofit retrofit = new Retrofit.Builder()
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
@@ -118,10 +116,12 @@ public class MobileMoneyActivity extends AppCompatActivity {
                                         }
                                     }).create()
                                     .show();
+                        } else {
+                            Toast.makeText(MobileMoneyActivity.this, mobileMoneyResponse
+                                    .getDescription(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-
     }
 
     private void createNotification() {

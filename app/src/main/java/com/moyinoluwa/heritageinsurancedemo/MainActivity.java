@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         } else {
-            Toast.makeText(this, "Either the username or password is not correct.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Either the username or password is not correct.", Toast
+                    .LENGTH_SHORT).show();
         }
 
     }
