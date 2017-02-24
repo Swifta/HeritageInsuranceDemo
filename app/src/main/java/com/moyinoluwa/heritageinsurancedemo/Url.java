@@ -1,4 +1,4 @@
-package com.moyinoluwa.heritageinsurancedemo.transaction;
+package com.moyinoluwa.heritageinsurancedemo;
 
 /**
  * Created by moyinoluwa on 10/11/16.
