@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_grey_800_48dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_cash"
+            android:icon="@drawable/ic_credit_card_grey_700_48dp"
+            android:title="Cash"/>
+        <item
+            android:id="@+id/nav_pos"
+            android:icon="@drawable/ic_credit_card_grey_700_48dp"
+            android:title="POS"/>
+        <item
+            android:id="@+id/nav_mobile_money"
+            android:icon="@drawable/ic_credit_card_grey_700_48dp"
+            android:title="Mobile Money"/>
+        <item
+            android:id="@+id/nav_statement"
+            android:icon="@drawable/ic_list_grey_700_48dp"
+            android:title="Transaction Statement"/>
+    </group>
+
+</menu>
