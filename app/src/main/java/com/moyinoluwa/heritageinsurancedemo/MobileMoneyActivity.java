@@ -32,8 +32,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class MobileMoneyActivity extends AppCompatActivity {
-    //    EditText amount;
-//    EditText description;
     TextView textView;
     Button button;
     ProgressBar progressBar;
@@ -44,8 +42,6 @@ public class MobileMoneyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mobile_money);
 
-//        amount = (EditText) findViewById(R.id.amount);
-//        description = (EditText) findViewById(R.id.description);
         textView = (TextView) findViewById(R.id.payment_text);
         button = (Button) findViewById(R.id.pay);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
@@ -56,93 +52,8 @@ public class MobileMoneyActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-//    public void confirmPaymentWithMobileMoney(View view) {
-//        String amountText = "5000";
-////        String descText = description.getText().toString();
-//        String descText = paymentText;
-//
-//        if (amountText.isEmpty() || descText.isEmpty()) {
-//            Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
-//        } else {
-//
-////            amount.setVisibility(View.GONE);
-////            description.setVisibility(View.GONE);
-//            textView.setVisibility(View.GONE);
-//            button.setVisibility(View.GONE);
-//            progressBar.setVisibility(View.VISIBLE);
-//
-//            String basicAuth = "Basic " + Base64.encodeToString(String.format("%s:%s", "agent1",
-//                    "1234").getBytes(), Base64.NO_WRAP);
-//
-//            TransactionRequest transactionRequest = new TransactionRequest("customer1", amountText,
-//                    descText, "cedis");
-//
-//            final Retrofit retrofit = new Retrofit.Builder()
-//                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-//                    .addConverterFactory(GsonConverterFactory.create())
-//                    .baseUrl(Url.BASE_URL)
-//                    .build();
-//
-//            TransactionService transactionService = retrofit.create(TransactionService.class);
-//
-//            final Observable<TransactionResponse> registerObservable =
-//                    transactionService.performTransaction(basicAuth, transactionRequest);
-//
-//            registerObservable.subscribeOn(Schedulers.io())
-//                    .observeOn(AndroidSchedulers.mainThread())
-//                    .unsubscribeOn(Schedulers.io())
-//                    .subscribe(new Subscriber<TransactionResponse>() {
-//
-//                        @Override
-//                        public void onCompleted() {
-//                        }
-//
-//                        @Override
-//                        public void onError(Throwable e) {
-//
-////                            amount.setVisibility(View.VISIBLE);
-////                            description.setVisibility(View.VISIBLE);
-//                            textView.setVisibility(View.VISIBLE);
-//                            button.setVisibility(View.VISIBLE);
-//                            progressBar.setVisibility(View.GONE);
-//
-//                            Toast.makeText(MobileMoneyActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-//                        }
-//
-//                        @Override
-//                        public void onNext(TransactionResponse transactionResponse) {
-////                            amount.setText("");
-////                            description.setText("");
-//
-////                            amount.setVisibility(View.VISIBLE);
-////                            description.setVisibility(View.VISIBLE);
-//                            textView.setVisibility(View.VISIBLE);
-//                            button.setVisibility(View.VISIBLE);
-//                            progressBar.setVisibility(View.GONE);
-//
-//                            AlertDialog.Builder alertBuilder = new AlertDialog.Builder
-//                                    (MobileMoneyActivity.this);
-//
-//                            alertBuilder.setMessage("Transaction started successfully! You'll receive a notification " +
-//                                    "about the status of the transaction within 10 minutes!")
-//                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                                        @Override
-//                                        public void onClick(DialogInterface dialog, int which) {
-//                                            createNotification();
-//                                            Intent i = new Intent(MobileMoneyActivity.this, NavigationActivity
-//                                                    .class);
-//                                            startActivity(i);
-//                                        }
-//                                    }).create()
-//                                    .show();
-//                        }
-//                    });
-//        }
-//    }
-
     public void confirmPaymentWithMobileMoney(View view) {
         String amountText = "5000";
-        String descText = paymentText;
 
         textView.setVisibility(View.GONE);
         button.setVisibility(View.GONE);
